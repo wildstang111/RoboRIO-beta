@@ -1,0 +1,9 @@
+1) AnalogChannel no longer exists; now using AnalogInput
+
+2) FileLogger now uses official Java io apis
+
+3) DriverStation.getInstance().getAnalogIn(channel) doesn't exist anymore
+---WsDSAnalogInput
+---WsDSDigitalInput
+
+Switched all WsLists to ArrayList.
