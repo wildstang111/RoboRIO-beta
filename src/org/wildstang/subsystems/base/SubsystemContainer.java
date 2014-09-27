@@ -83,10 +83,10 @@ public class SubsystemContainer {
 	public static final String LIGHT_CANNON = "LightCannon";
 	public static final String BALL_HANDLER = "BallHandler";
 	public static final String CATAPULT = "Catapult";
-	public static final String LANDING_GEAR = "LandingGear";
-	 //public static final String HOT_GOAL_DETECTOR = "HotGoalsDetector";
+	//public static final String HOT_GOAL_DETECTOR = "HotGoalsDetector";
 	public static final String WINGS = "Wings";
 
+	public static final String LANDING_GEAR = "LandingGear";
 	public static final int DRIVE_BASE_INDEX = 0;
 	public static final int WS_COMPRESSOR_INDEX = 1;
 	public static final int LED_INDEX = 2;

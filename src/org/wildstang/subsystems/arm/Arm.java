@@ -8,10 +8,12 @@ import org.wildstang.config.BooleanConfigFileParameter;
 import org.wildstang.config.DoubleConfigFileParameter;
 import org.wildstang.config.IntegerConfigFileParameter;
 import org.wildstang.inputmanager.base.InputManager;
+import org.wildstang.outputmanager.base.IOutput;
 import org.wildstang.outputmanager.base.OutputManager;
 import org.wildstang.pid.controller.base.PidController;
 import org.wildstang.pid.inputs.ArmPotPidInput;
 import org.wildstang.pid.outputs.ArmVictorPidOutput;
+
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
@@ -46,6 +48,10 @@ public class Arm {
 		this.VICTOR_ANGLE_INDEX = victorAngleIndex;
 		this.ARM_ROLLER_VICTOR_INDEX = armRollerVictorIndex;
 		this.POT_INDEX = potIndex;
+		System.out.println("ARM CONSTRUCTOR");
+		System.out.println("VICTOR_ANGLE_INDEX: " + VICTOR_ANGLE_INDEX);
+		System.out.println("ARM_ROLLER_VICTOR_INDEX: " + ARM_ROLLER_VICTOR_INDEX);
+		System.out.println("END ARM CONSTRUCTOR");
 
 		TOP_VOLTAGE_VALUE_CONFIG = new DoubleConfigFileParameter(this.getClass().getName(), (front ? "Front" : "Back") + ".TopVoltageValue", 5.1);
 		BOTTOM_VOLTAGE_VALUE_CONFIG = new DoubleConfigFileParameter(this.getClass().getName(), (front ? "Front" : "Back") + ".BottomVoltageValue", 0.0);
@@ -118,7 +124,10 @@ public class Arm {
 
 	public void init() {
 		rollerValue = ArmRollerEnum.OFF;
-		OutputManager.getInstance().getOutput(ARM_ROLLER_VICTOR_INDEX).set(new Double(0.0));
+		IOutput o = OutputManager.getInstance().getOutput(ARM_ROLLER_VICTOR_INDEX);
+		System.out.println("arm roller victor indexe: " + ARM_ROLLER_VICTOR_INDEX);
+		System.out.println("Output type: " + o.getClass().getName());
+		o.set(new Double(0.0));
 		pid.disable();
 		if (!diablePidInit && !disablePidCompletely) {
 			setToAngle(0);

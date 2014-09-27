@@ -100,18 +100,18 @@ public class OutputManager {
 	protected OutputManager() {
 		// Add the facade data elements
 		outputs.add(UNKNOWN_INDEX, new NoOutput());
-		outputs.add(RIGHT_DRIVE_SPEED_INDEX, new WsDriveSpeed("Right Drive Speed", 3, 4));
-		outputs.add(LEFT_DRIVE_SPEED_INDEX, new WsDriveSpeed("Left Drive Speed", 1, 2));
+		outputs.add(RIGHT_DRIVE_SPEED_INDEX, new WsDriveSpeed("Right Drive Speed", 2, 3));
+		outputs.add(LEFT_DRIVE_SPEED_INDEX, new WsDriveSpeed("Left Drive Speed", 0, 1));
 		outputs.add(SHIFTER_INDEX, new WsDoubleSolenoid("Shifter", 1, 1, 2));
 		outputs.add(LIGHT_CANNON_RELAY_INDEX, new WsRelay(2, Relay.Direction.kForward));
 		outputs.add(WINGS_SOLENOID_INDEX, new WsDoubleSolenoid("Wings Solenoid1", 1, 3, 4));
 		outputs.add(LANDING_GEAR_SOLENOID_INDEX, new WsDoubleSolenoid("Landing Gear Solenoid", 1, 7, 8));
 		outputs.add(CATAPAULT_SOLENOID_INDEX, new WsSolenoid("Arm Catapult Solenoid", 1, 5));
-		 outputs.add(EARS_SOLENOID_INDEX, new WsDoubleSolenoid("Ears Double Solenoid", 2, 1, 2));
-		outputs.add(FRONT_ARM_VICTOR_INDEX, new WsVictor("Front Arm Victor", 5));
-		outputs.add(BACK_ARM_VICTOR_INDEX, new WsVictor("Back Arm Victor", 6));
-		outputs.add(FRONT_ARM_ROLLER_VICTOR_INDEX, new WsVictor("Front Arm Roller Victor", 7));
-		outputs.add(BACK_ARM_ROLLER_VICTOR_INDEX, new WsVictor("Back Arm Roller Victor", 8));
+		outputs.add(EARS_SOLENOID_INDEX, new WsDoubleSolenoid("Ears Double Solenoid", 2, 1, 2));
+		outputs.add(FRONT_ARM_VICTOR_INDEX, new WsVictor("Front Arm Victor", 4));
+		outputs.add(BACK_ARM_VICTOR_INDEX, new WsVictor("Back Arm Victor", 5));
+		outputs.add(FRONT_ARM_ROLLER_VICTOR_INDEX, new WsVictor("Front Arm Roller Victor", 6));
+		outputs.add(BACK_ARM_ROLLER_VICTOR_INDEX, new WsVictor("Back Arm Roller Victor", 7));
 		outputs.add(LATCH_SOLENOID_INDEX, new WsSolenoid("Latch Solenoid", 1, 6));
 	}
 }

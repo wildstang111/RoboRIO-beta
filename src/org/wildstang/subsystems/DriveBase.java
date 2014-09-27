@@ -153,9 +153,9 @@ public class DriveBase extends Subsystem implements IObserver {
 		registerForJoystickButtonNotification(JoystickButtonEnum.DRIVER_BUTTON_6);
 
 		// Initialize the drive base encoders
-		leftDriveEncoder = new Encoder(2, 3, true, EncodingType.k4X);
+		leftDriveEncoder = new Encoder(0, 1, true, EncodingType.k4X);
 		leftDriveEncoder.reset();
-		rightDriveEncoder = new Encoder(4, 5, false, EncodingType.k4X);
+		rightDriveEncoder = new Encoder(2, 3, false, EncodingType.k4X);
 		rightDriveEncoder.reset();
 
 		// Initialize the gyro

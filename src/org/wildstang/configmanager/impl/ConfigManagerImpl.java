@@ -88,12 +88,8 @@ public final class ConfigManagerImpl {
 
 	public static boolean checkCreateFile(String filename) {
 
-		File file;
-		String path = "file://";
-		path += filename;
-
 		try {
-			file = new File(path);
+			File file = new File(filename);
 			if (file.exists()) {
 				return true;
 			} else {

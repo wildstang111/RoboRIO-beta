@@ -173,12 +173,12 @@ public class InputManager {
 		 //sensorInputs.add(LEFT_ENCODER_B_INDEX, new WsDigitalInput(3));
 		 //sensorInputs.add(RIGHT_ENCODER_A_INDEX, new WsDigitalInput(4));
 		 //sensorInputs.add(RIGHT_ENCODER_B_INDEX, new WsDigitalInput(5));
-		sensorInputs.add(TENSION_LIMIT_SWITCH_INDEX, new WsDigitalInput(6));
-		sensorInputs.add(BALL_DETECT_SWITCH_INDEX, new WsDigitalInput(7));
-		sensorInputs.add(LATCH_POSITION_SWITCH_INDEX, new WsDigitalInput(8));
-		sensorInputs.add(CATAPULT_DOWN_SWITCH_INDEX, new WsDigitalInput(9));
-		sensorInputs.add(FRONT_ARM_CALIBRATION_SWITCH_INDEX, new WsDigitalInput(10));
-		sensorInputs.add(BACK_ARM_CALIBRATION_SWITCH_INDEX, new WsDigitalInput(11));
+		sensorInputs.add(TENSION_LIMIT_SWITCH_INDEX, new WsDigitalInput(4));
+		sensorInputs.add(BALL_DETECT_SWITCH_INDEX, new WsDigitalInput(10));
+		sensorInputs.add(LATCH_POSITION_SWITCH_INDEX, new WsDigitalInput(6));
+		sensorInputs.add(CATAPULT_DOWN_SWITCH_INDEX, new WsDigitalInput(7));
+		sensorInputs.add(FRONT_ARM_CALIBRATION_SWITCH_INDEX, new WsDigitalInput(8));
+		sensorInputs.add(BACK_ARM_CALIBRATION_SWITCH_INDEX, new WsDigitalInput(9));
 
 		oiInputs.add(UNKNOWN_INDEX, new NoInput());
 		oiInputs.add(DRIVER_JOYSTICK_INDEX, new DriverJoystick());
